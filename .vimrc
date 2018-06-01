@@ -34,11 +34,14 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'wakatime/vim-wakatime' " Wakatime
 Plugin 'w0rp/ale' " Async linter engine
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+set laststatus=2 " always show powerline (0 - never,1 - only when split, 2 - always)
 Plugin 'altercation/vim-colors-solarized'
 set background=dark
 colorscheme solarized
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
 Bundle 'Valloric/YouCompleteMe'
+
+Plugin 'janko-m/vim-test'
 
 " Enable folding
 set foldmethod=indent
@@ -50,11 +53,13 @@ let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
 "python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
+" Doesn't work
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"  project_base_dir = os.environ['VIRTUAL_ENV']
+"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"  execfile(activate_this, dict(__file__=activate_this))
+"EOF
+let g:pymode_python = 'python3'
