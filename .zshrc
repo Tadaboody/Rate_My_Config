@@ -60,6 +60,7 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-open #https://github.com/paulirish/git-open
 )
 
 source $ZSH/oh-my-zsh.sh
