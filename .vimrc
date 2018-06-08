@@ -3,6 +3,8 @@ set number " line numbering
 set hlsearch " search highlighting
 set noswapfile " disable .swp file creation
 set encoding=utf-8
+set ignorecase " caseinsensitive
+set mouse=nicr
 
 " VUNDLE
 set nocompatible              " required
@@ -31,6 +33,8 @@ filetype plugin indent on    " required
 "
 Plugin 'scrooloose/nerdtree' " NERDTree - file explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin' 
+let NERDTreeIgnore=['venv$[[dir]]','\~$', '__pycache__']
+map <C-n> :NERDTreeToggle<CR>
 Plugin 'wakatime/vim-wakatime' " Wakatime
 Plugin 'w0rp/ale' " Async linter engine
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -39,9 +43,13 @@ Plugin 'altercation/vim-colors-solarized'
 set background=dark
 colorscheme solarized
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
+"Plugin 'davidhalter/jedi-vim'
 
-Plugin 'janko-m/vim-test'
+Plugin 'alfredodeza/pytest.vim'
+filetype on
+filetype plugin on
+Plugin 'idanarye/vim-vebugger'
 
 " Enable folding
 set foldmethod=indent
@@ -62,4 +70,3 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 "  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
 "  execfile(activate_this, dict(__file__=activate_this))
 "EOF
-let g:pymode_python = 'python3'
