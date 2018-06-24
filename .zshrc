@@ -61,6 +61,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   git-open #https://github.com/paulirish/git-open
+  autoenv
 )
 
 source $ZSH/oh-my-zsh.sh
