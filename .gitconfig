@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Tomer Keren
+	email = tomer.keren.dev@gmail.com
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+[core]
+	hookspath = /Users/tomer/.git-hooks
+[commit]
+	template = /Users/tomer/.git_commit_msg.txt
