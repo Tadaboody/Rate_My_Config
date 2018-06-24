@@ -10,6 +10,6 @@
 [alias]
 	d = difftool
 [core]
-	hookspath = /Users/tomer/.git-hooks
+#	hookspath = /Users/tomer/.git-hooks
 [commit]
 	template = /Users/tomer/.git_commit_msg.txt
