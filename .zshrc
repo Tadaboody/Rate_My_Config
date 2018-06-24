@@ -100,3 +100,4 @@ alias "less!!"="!! | less"
 alias "pytest"="python3 -m pytest"
 alias "ipython"="python3 -m IPython"
 
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"

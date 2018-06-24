@@ -40,8 +40,6 @@ Plugin 'w0rp/ale' " Async linter engine
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 set laststatus=2 " always show powerline (0 - never,1 - only when split, 2 - always)
 Plugin 'altercation/vim-colors-solarized'
-set background=dark
-colorscheme solarized
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
 "Bundle 'Valloric/YouCompleteMe'
 "Plugin 'davidhalter/jedi-vim'
@@ -56,9 +54,14 @@ set foldmethod=indent
 set foldlevel=99
 
 " change cursor shape in different modes on iterm2+tmux
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+if($TERM_PROGRAM== "iTerm.app")
+" Set dark theme (Looks horrid inside vscode)
+	colorscheme solarized
+	set background=dark 
+	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+	let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+en
 
 "python with virtualenv support
 " Doesn't work
@@ -70,3 +73,4 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 "  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
 "  execfile(activate_this, dict(__file__=activate_this))
 "EOF
+" :silent exec
