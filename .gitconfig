@@ -13,3 +13,5 @@
 #	hookspath = /Users/tomer/.git-hooks
 [commit]
 	template = /Users/tomer/.git_commit_msg.txt
+[core]
+	excludesfile = /Users/tomer/.gitignore_global
