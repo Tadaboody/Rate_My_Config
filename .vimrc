@@ -63,6 +63,10 @@ if($TERM_PROGRAM== "iTerm.app")
 	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 en
 
+" Autoformatter setup
+autocmd FileType c,cpp setlocal equalprg=clang-format
+autocmd FileType python setlocal equalprg=autopep8\ -\ -a
+
 "python with virtualenv support
 " Doesn't work
 "py << EOF
