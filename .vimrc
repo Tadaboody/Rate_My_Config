@@ -34,6 +34,8 @@ Plugin 'altercation/vim-colors-solarized'
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
 "Bundle 'Valloric/YouCompleteMe'
 "Plugin 'davidhalter/jedi-vim'
+Plugin 'tpope/vim-commentary' " Comment lines with gc
+Plugin 'tpope/vim-surround' " surround with s commands 
 
 Plugin 'alfredodeza/pytest.vim'
 filetype on
