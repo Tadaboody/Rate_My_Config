@@ -22,15 +22,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
-
-" ...
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" END VUNDLE
-
-
-"
 Plugin 'scrooloose/nerdtree' " NERDTree - file explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin' 
 let NERDTreeIgnore=['venv$[[dir]]','\~$', '__pycache__']
@@ -48,6 +39,15 @@ Plugin 'alfredodeza/pytest.vim'
 filetype on
 filetype plugin on
 Plugin 'idanarye/vim-vebugger'
+" ...
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" END VUNDLE
+
+
+"
 
 " Enable folding
 set foldmethod=indent
