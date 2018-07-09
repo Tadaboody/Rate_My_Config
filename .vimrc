@@ -3,8 +3,16 @@ set number " line numbering
 set hlsearch " search highlighting
 set noswapfile " disable .swp file creation
 set encoding=utf-8
-set ignorecase " caseinsensitive
+set ignorecase " caseinsensitive search
 set mouse=nicr
+" Indents
+filetype plugin indent on    " required
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
 " VUNDLE
 set nocompatible              " required
