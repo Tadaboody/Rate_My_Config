@@ -18,3 +18,7 @@
 [status]
 	short = true
 	branch = true
+[url "git@github.com:"]
+    insteadOf = github:
+[url "git@gitlab.com:"]
+    insteadOf = gitlab:
