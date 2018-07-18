@@ -3,7 +3,7 @@
 # Why is this change needed?
 Prior to this change, 
 
-Sarting form this commit,
+Sarting from this commit,
 
 # Provide links to any relevant tickets, articles or other resources
 Closes: #
