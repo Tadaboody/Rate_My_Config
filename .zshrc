@@ -9,20 +9,6 @@ export ZSH=/Users/tomer/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -33,7 +19,7 @@ ZSH_THEME="agnoster"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -62,6 +48,8 @@ plugins=(
   git
   git-open #https://github.com/paulirish/git-open
   autoenv
+  pip
+  git-extras
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -101,5 +89,9 @@ alias venv="source venv/bin/activate"
 alias "less!!"="!! | less"
 alias "pytest"="python3 -m pytest"
 alias "ipython"="python3 -m IPython"
+alias "vimrc"="vim ~/.vimrc"
+alias "zshrc"="vim ~/.zshrc"
+alias "pylintrc"="vim ~/.pylintrc"
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
