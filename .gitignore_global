@@ -37,3 +37,7 @@ ehthumbs.db
 Thumbs.db
 
 .vscode/.history
+.ropeproject
+
+# Python virtual enviroments
+venv
