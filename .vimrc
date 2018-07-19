@@ -40,15 +40,18 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 set laststatus=2 " always show powerline (0 - never,1 - only when split, 2 - always)
 Plugin 'altercation/vim-colors-solarized'
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
-"Bundle 'Valloric/YouCompleteMe'
-"Plugin 'davidhalter/jedi-vim'
 Plugin 'tpope/vim-commentary' " Comment lines with gc
 Plugin 'tpope/vim-surround' " surround with s commands 
 
 Plugin 'alfredodeza/pytest.vim'
 filetype on
 filetype plugin on
-Plugin 'idanarye/vim-vebugger'
+Plugin 'airblade/vim-gitgutter' " Show git diff in gutter
+
+Plugin 'maralla/completor.vim'
+let g:completor_python_binary = 'python'
+let g:completor_clang_binary = 'clang'
+let g:completor_complete_options = 'menuone,noselect,preview'
 " ...
 
 " All of your Plugins must be added before the following line
