@@ -1,6 +1,5 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Tomer Keren
 	email = tomer.keren.dev@gmail.com
 [diff]
@@ -9,8 +8,13 @@
 	prompt = false
 [alias]
 	d = difftool
+    s = status
+    a = add
+    c = commit
+    m = merge
+    l = log
 [core]
-#	hookspath = /Users/tomer/.git-hooks
+#	hookspath = /Users/tomer/.git-hooks #FIXME: makes a **single** set of hooks for everybody, not a good idea because it overrides local ones
 [commit]
 	template = /Users/tomer/.git_commit_msg.txt
 [core]
