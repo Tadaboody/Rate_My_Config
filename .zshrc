@@ -19,7 +19,7 @@ ZSH_THEME="agnoster"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -50,6 +50,7 @@ plugins=(
   autoenv
   pip
   git-extras
+  hub
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -68,6 +69,7 @@ else
   export EDITOR='mvim'
 fi
 
+DEFAULT_USER="$(whoami)"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 source ~/.functions
@@ -95,3 +97,4 @@ alias "pylintrc"="vim ~/.pylintrc"
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
+source ~/.secrets
