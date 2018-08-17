@@ -1,5 +1,6 @@
 syntax enable " syntax highlighting
 set number " line numbering
+set relativenumber " Hybrid line numbering 
 set hlsearch " search highlighting
 set noswapfile " disable .swp file creation
 set encoding=utf-8
