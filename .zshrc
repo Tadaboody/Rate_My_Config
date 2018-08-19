@@ -51,6 +51,7 @@ plugins=(
   pip
   git-extras
   hub
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -82,7 +83,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-bindkey -v
 # Env variables
 export VISUAL=vim
 export EDITOR="$VISUAL"
