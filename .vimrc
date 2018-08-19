@@ -14,7 +14,9 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
-
+"Peresistent undo, make sure to create the dir ~/.vim/undodir
+set undofile
+set undodir=~/.vim/undodir
 " VUNDLE
 set nocompatible              " required
 filetype off                  " required
