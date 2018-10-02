@@ -52,7 +52,7 @@ filetype plugin on
 Plugin 'airblade/vim-gitgutter' " Show git diff in gutter
 
 Plugin 'maralla/completor.vim'
-let g:completor_python_binary = 'python'
+let g:completor_python_binary = 'python3'
 let g:completor_clang_binary = 'clang'
 let g:completor_complete_options = 'menuone,noselect,preview'
 " ...
