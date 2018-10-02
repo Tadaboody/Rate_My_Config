@@ -52,6 +52,7 @@ plugins=(
   git-extras
   hub
   vi-mode
+  emoji
 )
 
 source $ZSH/oh-my-zsh.sh
