@@ -14,6 +14,7 @@
     c = commit
     m = merge
     l = log
+    master = checkout master
 [core]
 #	hookspath = /Users/tomer/.git-hooks #FIXME: makes a **single** set of hooks for everybody, not a good idea because it overrides local ones
 [commit]
