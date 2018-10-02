@@ -98,3 +98,4 @@ alias "pylintrc"="vim ~/.pylintrc"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 source ~/.secrets
+export MY_IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
