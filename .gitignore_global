@@ -42,3 +42,4 @@ Thumbs.db
 # Python virtual enviroments
 venv
 .idea
+__pycache__
