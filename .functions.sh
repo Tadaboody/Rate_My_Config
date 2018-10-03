@@ -3,5 +3,6 @@ markdown_preview(){
 }
 
 git_feature_branch() {
-    ( [ -z "$2" ] && echo $2 ) || clippaste|python3 -c "print('_'.join(input().split()) + '$1')"|xargs git checkout -b
+    # Adds a new git branch named [name_with_underscores_$1]. name is either in clipboard or given as a second argument
+    (( [ "$2" ] && echo $2 ) || clippaste )|python3 -c "print('_'.join(input().split()) + '_$1')"|xargs git checkout -b
 }
