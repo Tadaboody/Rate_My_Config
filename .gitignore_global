@@ -43,3 +43,8 @@ Thumbs.db
 venv
 .idea
 __pycache__
+# pytest
+.pytest_cache
+# pytest-cov
+cov.xml
+.coverage
