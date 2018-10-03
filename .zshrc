@@ -74,7 +74,7 @@ fi
 DEFAULT_USER="$(whoami)"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-source ~/.functions
+source ~/.functions.sh
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
