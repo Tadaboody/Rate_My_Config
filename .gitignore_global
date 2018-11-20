@@ -48,3 +48,5 @@ __pycache__
 # pytest-cov
 cov.xml
 .coverage
+.vscode
+.mypy_cache
