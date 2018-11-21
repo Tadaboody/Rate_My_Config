@@ -1,6 +1,7 @@
 syntax enable " syntax highlighting
 set number " line numbering
-set relativenumber " Hybrid line numbering 
+" set relativenumber " Hybrid line numbering 
+" set hybrid
 set hlsearch " search highlighting
 set noswapfile " disable .swp file creation
 set encoding=utf-8
@@ -94,3 +95,8 @@ autocmd FileType python setlocal equalprg=autopep8\ -\ -a
 "  execfile(activate_this, dict(__file__=activate_this))
 "EOF
 " :silent exec
+set splitright
+set splitbelow
+"Make a vertical split that lists the issues, uses https://github.com/github/hub
+command! ViewIssues execute "normal! \:vertical terminal hub issue<CR><C-w>h" 
+autocmd FileType gitcommit ViewIssues
