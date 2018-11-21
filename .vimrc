@@ -51,6 +51,8 @@ Plugin 'alfredodeza/pytest.vim'
 filetype on
 filetype plugin on
 Plugin 'airblade/vim-gitgutter' " Show git diff in gutter
+Plugin 'tpope/vim-fugitive'
+
 
 Plugin 'maralla/completor.vim'
 let g:completor_python_binary = 'python3'
@@ -100,4 +102,13 @@ set splitbelow
 "Make a vertical split that lists the issues, uses https://github.com/github/hub
 command! ViewIssues execute "normal! \:vertical terminal hub issue<CR><C-w>h" 
 autocmd FileType gitcommit ViewIssues
+
+function! MiniTerm(...)
+    execute 'terminal' join(a:000," ")
+    resize 10
+    normal <C-w>k
+endfunction
+    
+command! -nargs=+ MiniTerm call MiniTerm(<f-args>)
+
 autocmd bufwritepost .vimrc source %
