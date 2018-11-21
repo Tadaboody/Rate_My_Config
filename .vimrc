@@ -100,3 +100,4 @@ set splitbelow
 "Make a vertical split that lists the issues, uses https://github.com/github/hub
 command! ViewIssues execute "normal! \:vertical terminal hub issue<CR><C-w>h" 
 autocmd FileType gitcommit ViewIssues
+autocmd bufwritepost .vimrc source %
