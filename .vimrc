@@ -53,8 +53,6 @@ filetype plugin on
 Plugin 'airblade/vim-gitgutter' " Show git diff in gutter
 Plugin 'tpope/vim-fugitive'
 
-
-Plugin 'maralla/completor.vim'
 let g:completor_python_binary = 'python3'
 let g:completor_clang_binary = 'clang'
 let g:completor_complete_options = 'menuone,noselect,preview'
@@ -102,6 +100,8 @@ set splitbelow
 "Make a vertical split that lists the issues, uses https://github.com/github/hub
 command! ViewIssues execute "normal! \:vertical terminal hub issue<CR><C-w>h" 
 autocmd FileType gitcommit ViewIssues
+autocmd FileType gitcommit command wq wqa " Quit all splits when saving and quit git commits
+autocmd FileType gitcommit command q! qa! " Quit all splits when force quitting git commits
 
 function! MiniTerm(...)
     execute 'terminal' join(a:000," ")
@@ -112,3 +112,4 @@ endfunction
 command! -nargs=+ MiniTerm call MiniTerm(<f-args>)
 
 autocmd bufwritepost .vimrc source %
+

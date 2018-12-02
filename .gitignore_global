@@ -50,3 +50,6 @@ cov.xml
 .coverage
 .vscode
 .mypy_cache
+build
+dist
+*.egg-info
