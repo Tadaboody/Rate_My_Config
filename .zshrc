@@ -95,6 +95,7 @@ alias "ipython"="python3 -m IPython"
 alias "vimrc"="vim ~/.vimrc"
 alias "zshrc"="vim ~/.zshrc"
 alias "pylintrc"="vim ~/.pylintrc"
+alias mv=gitmv
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 

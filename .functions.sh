@@ -18,3 +18,13 @@ init_venv(){
     echo "source venv/bin/activate" >>.env
     source .env
 }
+gitmv()
+{
+    # If in a git repo - call git mv. otherwise- call mv
+    if [ x`git rev-parse --show-toplevel 2> /dev/null` = x ];
+    then
+        mv "$@"
+    else
+        git mv "$@"
+    fi
+}
