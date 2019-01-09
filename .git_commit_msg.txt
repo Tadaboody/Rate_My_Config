@@ -1,6 +1,6 @@
 
+# DON'T FORGET TWO NEWLINES BEFORE DESCRIPTION
 
-# Why is this change needed?
 
 ### Provide links to any relevant tickets, articles or other resources
 
