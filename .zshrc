@@ -93,8 +93,10 @@ alias "less!!"="!! | less"
 alias "pytest"="python3 -m pytest"
 alias "ipython"="python3 -m IPython"
 alias "vimrc"="vim ~/.vimrc"
-alias "zshrc"="vim ~/.zshrc"
+alias "zshrc"="vim ~/.zshrc&&source ~/.zshrc"
 alias "pylintrc"="vim ~/.pylintrc"
+alias "git"="hub" #"Install" github/hub
+alias androidstudio="open -a /Applications/Android\ Studio.app" # Open android studio from the terminal
 alias mv=gitmv
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
