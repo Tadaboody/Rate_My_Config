@@ -1,10 +1,6 @@
-# If applied, this commit will...
+
 
 # Why is this change needed?
-Prior to this change, 
-
-Sarting from this commit,
 
 # Provide links to any relevant tickets, articles or other resources
-Closes: #
-Progresses : #
+# Closes: #
