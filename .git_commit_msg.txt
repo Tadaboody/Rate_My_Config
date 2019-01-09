@@ -2,5 +2,7 @@
 
 # Why is this change needed?
 
-# Provide links to any relevant tickets, articles or other resources
-# Closes: #
+### Provide links to any relevant tickets, articles or other resources
+
+### Closes: #
+########################################
