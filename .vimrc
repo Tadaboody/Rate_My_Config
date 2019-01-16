@@ -7,8 +7,6 @@ set noswapfile " disable .swp file creation
 set encoding=utf-8
 set ignorecase " caseinsensitive search
 set mouse=nicr
-" Indents
-filetype plugin indent on    " required
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -18,50 +16,32 @@ set expandtab
 "Peresistent undo, make sure to create the dir ~/.vim/undodir
 set undofile
 set undodir=~/.vim/undodir
-" VUNDLE
-set nocompatible              " required
-filetype off                  " required
+" Set default split directions
+set splitright
+set splitbelow
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set ttyfast
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" The path plugins will be installed into
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-Plugin 'scrooloose/nerdtree' " NERDTree - file explorer
-Plugin 'Xuyuanp/nerdtree-git-plugin' 
+Plug 'scrooloose/nerdtree' " NERDTree - file explorer
+Plug 'Xuyuanp/nerdtree-git-plugin' 
 let NERDTreeIgnore=['venv$[[dir]]','\~$', '__pycache__']
 map <C-n> :NERDTreeToggle<CR>
-Plugin 'wakatime/vim-wakatime' " Wakatime
-Plugin 'w0rp/ale' " Async linter engine
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'wakatime/vim-wakatime' " Wakatime
+Plug 'w0rp/ale' " Async linter engine
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 set laststatus=2 " always show powerline (0 - never,1 - only when split, 2 - always)
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
-Plugin 'tpope/vim-commentary' " Comment lines with gc
-Plugin 'tpope/vim-surround' " surround with s commands 
+Plug 'tpope/vim-commentary' " Comment lines with gc
+Plug 'tpope/vim-surround' " surround with s commands 
 
-Plugin 'alfredodeza/pytest.vim'
-filetype on
-filetype plugin on
-Plugin 'airblade/vim-gitgutter' " Show git diff in gutter
-Plugin 'tpope/vim-fugitive'
-
-let g:completor_python_binary = 'python3'
-let g:completor_clang_binary = 'clang'
-let g:completor_complete_options = 'menuone,noselect,preview'
-" ...
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" END VUNDLE
+Plug 'airblade/vim-gitgutter' " Show git diff in gutter
+Plug 'tpope/vim-fugitive'
+" Initialize plug system
+call plug#end()
 
 
 "
@@ -95,13 +75,9 @@ autocmd FileType python setlocal equalprg=autopep8\ -\ -a
 "  execfile(activate_this, dict(__file__=activate_this))
 "EOF
 " :silent exec
-set splitright
-set splitbelow
 "Make a vertical split that lists the issues, uses https://github.com/github/hub
 command! ViewIssues execute "normal! \:vertical terminal hub issue<CR><C-w>h" 
 autocmd FileType gitcommit ViewIssues
-autocmd FileType gitcommit command wq wqa " Quit all splits when saving and quit git commits
-autocmd FileType gitcommit command q! qa! " Quit all splits when force quitting git commits
 
 function! MiniTerm(...)
     execute 'terminal' join(a:000," ")
