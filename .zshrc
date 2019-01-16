@@ -100,6 +100,17 @@ alias androidstudio="open -a /Applications/Android\ Studio.app" # Open android s
 alias mv=gitmv
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/Users/tomer/Library/Python/3.6/bin:$PATH"
 
 source ~/.secrets
 export MY_IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# Add android tools to path
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export WINEDEBUG=-all
