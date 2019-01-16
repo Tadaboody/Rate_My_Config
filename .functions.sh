@@ -28,3 +28,8 @@ gitmv()
         git mv "$@"
     fi
 }
+
+git_delete_gone_branches()
+{
+    git branch -v|grep gone|awk '{print $1}'|xargs git branch -d
+}
