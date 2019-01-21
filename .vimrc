@@ -22,6 +22,10 @@ set splitbelow
 
 set ttyfast
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
 " The path plugins will be installed into
 call plug#begin('~/.vim/plugged')
 
@@ -40,21 +44,18 @@ Plug 'tpope/vim-surround' " surround with s commands
 
 Plug 'airblade/vim-gitgutter' " Show git diff in gutter
 Plug 'tpope/vim-fugitive'
+
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " Initialize plug system
 call plug#end()
 
-
-"
-
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
 
 " change cursor shape in different modes on iterm2+tmux
 if($TERM_PROGRAM== "iTerm.app")
 " Set dark theme (Looks horrid inside vscode)
 	colorscheme solarized
 	set background=dark 
+    " Set edit character to change between modes
 	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 	let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 	let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -62,20 +63,7 @@ en
 
 " Autoformatter setup
 autocmd FileType c,cpp setlocal equalprg=clang-format
-autocmd FileType python setlocal equalprg=autopep8\ -\ -a
 
-"python with virtualenv support
-" Doesn't work
-"py << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  execfile(activate_this, dict(__file__=activate_this))
-"EOF
-" :silent exec
-"Make a vertical split that lists the issues, uses https://github.com/github/hub
 command! ViewIssues execute "normal! \:vertical terminal hub issue<CR><C-w>h" 
 autocmd FileType gitcommit ViewIssues
 
