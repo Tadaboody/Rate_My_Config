@@ -24,8 +24,10 @@
 	branch = true
 [url "git@github.com:"]
     insteadOf = gh:
+    insteadOf = github:
 [url "git@gitlab.com:"]
     insteadOf = gl:
+    insteadOf = gitlab:
 [fetch]
     prune=true
 [push]
