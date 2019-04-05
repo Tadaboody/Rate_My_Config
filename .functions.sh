@@ -33,3 +33,11 @@ git_delete_gone_branches()
 {
     git branch -v|grep gone|awk '{print $1}'|xargs git branch -d
 }
+
+# Registers your identity at an ssh server so you never need to write your password again
+ssh_register_key(){
+    # Creates a .ssh folder if it doesn't exist (Can it not exist on an ssh server?)
+    mkdir -p ~/ssh 2>/dev/null
+    # Adds my public ssh key to the given ssh server
+    cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'
+}
