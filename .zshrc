@@ -114,3 +114,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export WINEDEBUG=-all
 eval "$(pipenv --completion)"
+fortune|cowsay
