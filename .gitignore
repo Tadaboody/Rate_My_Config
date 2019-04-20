@@ -4,3 +4,4 @@
 !README.md
 .myclirc
 .yarnrc
+!vscode_keybindings.json
