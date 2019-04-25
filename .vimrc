@@ -33,10 +33,7 @@ Plug 'scrooloose/nerdtree' " NERDTree - file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 let NERDTreeIgnore=['venv$[[dir]]','\~$', '__pycache__']
 map <C-n> :NERDTreeToggle<CR>
-Plug 'wakatime/vim-wakatime' " Wakatime
 Plug 'w0rp/ale' " Async linter engine
-Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-set laststatus=2 " always show powerline (0 - never,1 - only when split, 2 - always)
 Plug 'altercation/vim-colors-solarized'
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
 Plug 'tpope/vim-commentary' " Comment lines with gc
@@ -45,7 +42,6 @@ Plug 'tpope/vim-surround' " surround with s commands
 Plug 'airblade/vim-gitgutter' " Show git diff in gutter
 Plug 'tpope/vim-fugitive'
 
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 " Initialize plug system
 call plug#end()
 
