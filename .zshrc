@@ -96,7 +96,6 @@ alias "vimrc"="vim ~/.vimrc"
 alias "zshrc"="vim ~/.zshrc&&source ~/.zshrc"
 alias "pylintrc"="vim ~/.pylintrc"
 alias androidstudio="open -a /Applications/Android\ Studio.app" # Open android studio from the terminal
-alias mv=gitmv
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/Users/tomer/Library/Python/3.6/bin:$PATH"
