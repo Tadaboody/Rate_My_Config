@@ -15,8 +15,6 @@
     master = checkout master
 [core]
 #	hookspath = /Users/tomer/.git-hooks #FIXME: makes a **single** set of hooks for everybody, not a good idea because it overrides local ones
-[commit]
-	template = ~/.git_commit_msg.txt
 [core]
 	excludesfile = ~/.gitignore_global
 [status]

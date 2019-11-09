@@ -1,8 +1,0 @@
-
-# DON'T FORGET TWO NEWLINES BEFORE DESCRIPTION
-
-
-### Provide links to any relevant tickets, articles or other resources
-
-### Closes: #
-########################################
