@@ -31,3 +31,8 @@ ssh_register_key(){
     # Adds my public ssh key to the given ssh server
     cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'
 }
+
+# Wrapper to allow base awk usage with leaner syntax
+awker() {
+    awk "{print \$$1}"
+}
