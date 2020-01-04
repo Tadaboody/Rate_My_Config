@@ -36,3 +36,11 @@ ssh_register_key(){
 awker() {
     awk "{print \$$1}"
 }
+
+add_to_path() {
+    if [ ! -d "$1" ]; then
+        echo "Argument isn't a directory, not adding"
+        ret 1
+    fi
+    echo "export PATH=$1;$PATH" >>.path
+}

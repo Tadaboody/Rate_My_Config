@@ -79,6 +79,7 @@ source ~/.functions.sh
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+source ~/.path
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -97,20 +98,14 @@ alias "zshrc"="vim ~/.zshrc&&source ~/.zshrc"
 alias "pylintrc"="vim ~/.pylintrc"
 alias androidstudio="open -a /Applications/Android\ Studio.app" # Open android studio from the terminal
 
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-export PATH="/Users/tomer/Library/Python/3.6/bin:$PATH"
-
 source ~/.secrets
 export MY_IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # Add android tools to path
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export WINEDEBUG=-all
+export CC=clang
 eval "$(pipenv --completion)"
 fortune|cowsay
