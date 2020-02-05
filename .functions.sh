@@ -40,3 +40,7 @@ add_to_path() {
     echo "_path_append $(realpath $1)" >>~/.path.sh
     source ~/.path.sh
 }
+
+nogrep(){
+    grep --invert-match "grep"
+}
