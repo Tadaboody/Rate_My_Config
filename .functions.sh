@@ -10,8 +10,7 @@ current_dir(){
 init_venv(){
     # Creates a py3 venv in a directory called venv with the cli prompt of the cwd's dirname
     python3 -m venv venv --prompt $(current_dir)
-    echo "source venv/bin/activate" >>.env
-    source .env
+    venv
 }
 
 git_delete_gone_branches()

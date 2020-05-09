@@ -47,7 +47,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   git-open #https://github.com/paulirish/git-open
-  autoenv
   pip
   git-extras
   hub
