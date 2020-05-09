@@ -56,3 +56,8 @@ dist
 .eggs
 stub.py
 .env
+
+elm-stuff
+
+.ipynb_checkpoint
+.venv
