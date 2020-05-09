@@ -31,3 +31,9 @@
 [push]
 # Push by default to the tracked remote branch, not the branch that is named the same (useful for PRs)
 	default = upstream 
+
+[core]
+    pager = delta --theme='Solarized (dark)'
+
+[interactive]
+    diffFilter = delta --color-only
