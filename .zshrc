@@ -52,6 +52,7 @@ plugins=(
   hub
   vi-mode
   emoji
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,5 +107,4 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 
 export WINEDEBUG=-all
 export CC=clang
-eval "$(pipenv --completion)"
 fortune|cowsay
