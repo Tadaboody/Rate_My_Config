@@ -91,8 +91,6 @@ export EDITOR="$VISUAL"
 # Aliases
 alias venv="source venv/bin/activate"
 alias "less!!"="!! | less"
-alias "pytest"="python3 -m pytest"
-alias "ipython"="python3 -m IPython"
 alias "vimrc"="vim ~/.vimrc"
 alias "zshrc"="vim ~/.zshrc&&source ~/.zshrc"
 alias "pylintrc"="vim ~/.pylintrc"
