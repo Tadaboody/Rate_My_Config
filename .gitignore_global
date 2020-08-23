@@ -61,3 +61,6 @@ elm-stuff
 
 .ipynb_checkpoint
 .venv
+
+# Rust
+target/
