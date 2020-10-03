@@ -14,6 +14,8 @@
     ch = checkout
     master = checkout master
     prep = submodule update --init --recursive
+    start = commit --allow-empty -m ':tada: Initial commit'
+    open = browse
 [core]
 #	hookspath = /Users/tomer/.git-hooks #FIXME: makes a **single** set of hooks for everybody, not a good idea because it overrides local ones
 [core]
