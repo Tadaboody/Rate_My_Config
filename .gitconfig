@@ -43,3 +43,5 @@
 [pull]
 	rebase = true
 	autostash = true
+[init]
+	defaultBranch = main
