@@ -17,8 +17,7 @@
     start = commit --allow-empty -m ':tada: Initial commit'
     open = browse
 [core]
-#	hookspath = /Users/tomer/.git-hooks #FIXME: makes a **single** set of hooks for everybody, not a good idea because it overrides local ones
-[core]
+    pager = delta --theme='Solarized (dark)'
 	excludesfile = ~/.gitignore_global
 [status]
 	short = true
@@ -26,6 +25,8 @@
 [url "git@github.com:"]
     insteadOf = gh:
     insteadOf = github:
+[url "git@github.com:Tadaboody/"]
+    insteadOf = me:
 [url "git@gitlab.com:"]
     insteadOf = gl:
     insteadOf = gitlab:
@@ -34,10 +35,6 @@
 [push]
 # Push by default to the tracked remote branch, not the branch that is named the same (useful for PRs)
 	default = upstream 
-
-[core]
-    pager = delta --theme='Solarized (dark)'
-
 [interactive]
     diffFilter = delta --color-only
 [pull]
@@ -45,3 +42,8 @@
 	autostash = true
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

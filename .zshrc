@@ -47,7 +47,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   git-open #https://github.com/paulirish/git-open
-  pip
   git-extras
   hub
   vi-mode
@@ -106,3 +105,5 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export WINEDEBUG=-all
 export CC=clang
 fortune|cowsay
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

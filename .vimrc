@@ -61,7 +61,7 @@ en
 autocmd FileType c,cpp setlocal equalprg=clang-format
 
 command! ViewIssues execute "normal! \:vertical terminal ++kill=9 hub issue<CR><C-w>h" 
-autocmd FileType gitcommit ViewIssues
+" autocmd FileType gitcommit ViewIssues
 
 function! MiniTerm(...)
     execute 'terminal' join(a:000," ")

@@ -64,3 +64,6 @@ elm-stuff
 
 # Rust
 target/
+
+CMakeFiles
+build
