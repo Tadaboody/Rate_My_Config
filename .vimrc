@@ -34,7 +34,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 let NERDTreeIgnore=['venv$[[dir]]','\~$', '__pycache__']
 map <C-n> :NERDTreeToggle<CR>
 Plug 'w0rp/ale' " Async linter engine
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 " DOESN'T WORK call togglebg#map("<F5>") " switch solarized theme with F5
 Plug 'tpope/vim-commentary' " Comment lines with gc
 Plug 'tpope/vim-surround' " surround with s commands 
@@ -47,9 +47,9 @@ call plug#end()
 
 
 " change cursor shape in different modes on iterm2+tmux
-if($TERM_PROGRAM== "iTerm.app")
+if($TERM_PROGRAM == "iTerm.app")
 " Set dark theme (Looks horrid inside vscode)
-	colorscheme solarized
+	" colorscheme solarized
 	set background=dark 
     " Set edit character to change between modes
 	let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
