@@ -15,10 +15,16 @@ end
 
 alias gst="git status"
 alias cat="bat"
-alias ls="lsd"
+# alias ls="lsd"
+alias less="bat --language=man"
+alias clipcopy="pbcopy"
+alias clippaste="pbpaste"
 
 # Created by `userpath` on 2020-10-02 20:16:49
 set PATH $PATH /Users/tomer/.local/bin
+set -gx MANPAGER "bat -l man"
+set -gx PAGER bat --plain
+set -gx ANDROID_HOME $HOME/Library/Android/sdk
 
 source ~/.cargo/env
 source ~/.secrets

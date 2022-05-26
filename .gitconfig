@@ -17,7 +17,7 @@
     start = commit --allow-empty -m ':tada: Initial commit'
     open = browse
 [core]
-    pager = delta --theme='Solarized (dark)'
+    pager = delta
 	excludesfile = ~/.gitignore_global
 [status]
 	short = true
@@ -47,3 +47,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[merge]
+	conflictstyle = diff3
