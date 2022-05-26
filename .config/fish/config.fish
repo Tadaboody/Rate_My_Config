@@ -1,4 +1,4 @@
-starship init fish | source
+#starship init fish | source
 
 function activate
     source $argv[1]/bin/activate.fish
@@ -28,3 +28,5 @@ set -gx ANDROID_HOME $HOME/Library/Android/sdk
 
 source ~/.cargo/env
 source ~/.secrets
+
+test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
