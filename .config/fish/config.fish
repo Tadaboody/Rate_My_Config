@@ -5,7 +5,7 @@ function activate
 end
 
 function venv
-    activate venv
+    activate .venv
 end
 
 function create_venv
